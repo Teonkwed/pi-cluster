@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: linkwarden
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: linkwarden
+  template:
+    metadata:
+      labels:
+        apps: linkwarden
+    spec:
+      containers:
+        - name: linkwarden
+          image: redrathnure/linkwarden:2.15
+          ports:
+            - containerPort:3000
