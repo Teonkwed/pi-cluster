@@ -17,3 +17,19 @@ spec:
           image: redrathnure/linkwarden:2.15
           ports:
             - containerPort: 3000
+          volumeMounts:
+            - name: linkwarden-storage
+              mountPath: /var/lib/postgresql/data
+#        - name: postgres
+#          image: postgres:15.19
+#          ports:
+#            - containerPort: 5432
+#          env:
+#            - name: POSTGRES_PASSWORD
+#              valueFrom:
+#                secretKeyRef:
+#                  name: postgres-secret
+#                  key: password
+#          volumeMounts:
+#            - name: linkwarden-storage
+#              mountPath: /var/lib/postgresql/data
