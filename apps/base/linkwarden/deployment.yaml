@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        apps: linkwarden
+        app: linkwarden
     spec:
       containers:
         - name: linkwarden
