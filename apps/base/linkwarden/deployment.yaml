@@ -16,4 +16,4 @@ spec:
         - name: linkwarden
           image: redrathnure/linkwarden:2.15
           ports:
-            - containerPort:3000
+            - containerPort: 3000
