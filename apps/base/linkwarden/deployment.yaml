@@ -20,6 +20,10 @@ spec:
           volumeMounts:
             - name: linkwarden-storage
               mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: linkwarden-storage
+          persistentVolumeClaim:
+            claimName: linkwarden-storage
 #        - name: postgres
 #          image: postgres:15.19
 #          ports:
